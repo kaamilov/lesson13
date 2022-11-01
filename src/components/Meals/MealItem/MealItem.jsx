@@ -1,7 +1,7 @@
 import classes from "./MealItem.module.css";
 import { useState } from "react";
 import MealItemForm from "./MealItemForm";
-export function MealItem({ name, description, price}) {
+export function MealItem({ name, description, price,id}) {
   const newPrice =price.toFixed(2);
   // const [count,setCount]=useState(0)
   // const [counter,setCounter]=useState(0)
@@ -37,7 +37,7 @@ export function MealItem({ name, description, price}) {
         </div>
       </section> */}
       <div>
-        <MealItemForm/>
+        <MealItemForm id={id}/>
       </div>
     </li>
   );

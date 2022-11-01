@@ -21,7 +21,7 @@ const DUMMY_MEALS = [
     price: 22.99,
   },
   {
-    id: "m1",
+    id: "m4",
     name: "Barbecue Burger",
     description: "American , raw , meaty",
     price: 12.99,
@@ -30,6 +30,7 @@ const DUMMY_MEALS = [
 export function AvailableMeals() {
   const mealsList = DUMMY_MEALS.map((meal) => {
     return (<MealItem 
+      id={meal.id}
       name={meal.name} 
       description={meal.description}
       price={meal.price}
