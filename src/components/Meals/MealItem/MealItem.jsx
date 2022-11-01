@@ -1,29 +1,30 @@
 import classes from "./MealItem.module.css";
 import { useState } from "react";
-export function MealItem({ name, description, price,id }) {
-  const newPrice = price.toFixed(2);
-  const [count,setCount]=useState(0)
-  const [counter,setCounter]=useState(0)
+import MealItemForm from "./MealItemForm";
+export function MealItem({ name, description, price}) {
+  const newPrice =price.toFixed(2);
+  // const [count,setCount]=useState(0)
+  // const [counter,setCounter]=useState(0)
   
-  function plus(){
-    setCount(count + 1)
-    setCounter((prev)=> +prev + price)
-  }
-  function minus(){
-   if(count>0){
-    setCount(count - 1)
-  setCounter((prev)=> prev -price)
-   }
-  }
+  // function plus(){
+  //   setCount(count + 1)
+  //   setCounter((prev)=> +prev + price)
+  // }
+  // function minus(){
+  //  if(count>0){
+  //   setCount(count - 1)
+  // setCounter((prev)=> prev -price)
+  //  }
+  // }
   
   return (
     <li className={classes.meal}>
       <div>
         <h3>{name}</h3>
-        <p>{description}</p>
-        <p>{Number(newPrice).toFixed(2)}</p>
+        <p className={classes.description}>{description}</p>
+        <p className={classes.price}>{Number(newPrice).toFixed(2)}</p>
       </div>
-      <section>
+      {/* <section>
         <div className={classes.cuont}>
           <button onClick={plus} className={classes.btn}>+</button>
           <p>{count}</p>
@@ -34,7 +35,10 @@ export function MealItem({ name, description, price,id }) {
           <div>total</div>
           <div>{Number(counter).toFixed(2)}</div>
         </div>
-      </section>
+      </section> */}
+      <div>
+        <MealItemForm/>
+      </div>
     </li>
   );
 }
