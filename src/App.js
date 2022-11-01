@@ -1,11 +1,14 @@
+import "./App.css";
+import { Header } from "./components/Lagout/Header";
+import Meals from "./components/Meals/Meals";
 
-import './App.css';
-import { Header } from './components/Lagout/Header';
 
 function App() {
   return (
     <div className="App">
-    <Header/>
+      <Header />
+     <Meals/>
+      
     </div>
   );
 }
